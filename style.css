@@ -1,0 +1,62 @@
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+font-family:Arial,sans-serif;
+background:linear-gradient(-45deg,#ff9ec4,#ffd6e8,#d6d5ff,#ffecc8);
+background-size:400% 400%;
+animation:bg 12s ease infinite;
+overflow-x:hidden;
+color:#fff;
+}
+@keyframes bg{0%{background-position:0 50%}50%{background-position:100% 50%}100%{background-position:0 50%}}
+.hero{height:100vh;display:flex;justify-content:center;align-items:center}
+.glass{
+background:rgba(255,255,255,.15);
+backdrop-filter:blur(14px);
+padding:40px;
+border-radius:25px;
+text-align:center;
+box-shadow:0 8px 30px rgba(0,0,0,.2);
+width:min(90%,700px)
+}
+h1{font-size:3rem;margin-bottom:15px}
+.subtitle{margin-bottom:25px}
+button{
+padding:14px 30px;border:none;border-radius:40px;
+background:#ff4f8b;color:#fff;font-size:1rem;
+cursor:pointer;transition:.3s
+}
+button:hover{transform:scale(1.08)}
+.hidden{display:none}
+.card{
+width:min(900px,92%);
+margin:40px auto;
+background:rgba(255,255,255,.16);
+padding:30px;border-radius:22px;
+backdrop-filter:blur(12px);
+text-align:center
+}
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:20px;
+width:min(1000px,92%);
+margin:30px auto;
+}
+.feature{
+padding:20px;border-radius:18px;
+background:rgba(255,255,255,.18);
+backdrop-filter:blur(8px);
+transition:.3s
+}
+.feature:hover{transform:translateY(-8px)}
+.bouquet{text-align:center;margin:50px}
+.heart{
+position:fixed;
+top:-20px;
+font-size:20px;
+animation:fall linear forwards;
+opacity:.8
+}
+@keyframes fall{
+to{transform:translateY(110vh) rotate(360deg)}
+}
